@@ -131,13 +131,13 @@ export async function getServerSideProps(context) {
     )
     .then((res) => unicodeToChar(res.data.toString("latin1")));
 
-  console.log("data :>> ", data);
+  // console.log("data :>> ", data);
 
   var content = JSON.parse(data.slice(5, data.length));
 
-  for (let i of content[0]) {
-    console.log(unicodeToChar(i[0]));
-  }
+  // for (let i of content[0]) {
+  //   console.log(unicodeToChar(i[0]));
+  // }
   return {
     props: {
       autoComplete: content[0],
